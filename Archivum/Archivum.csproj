@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ClosedXML" Version="0.105.0"/>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0"/>
+        <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" NoWarn="NU1701"/>
+        <PackageReference Include="MaterialDesignThemes" Version="5.3.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.5"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.5"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.5"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0"/>
+        <PackageReference Include="PDFtoImage" Version="5.4.0"/>
+        <PackageReference Include="SkiaSharp" Version="4.151.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Migrations\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Localization\Strings.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Localization\Strings.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Strings.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>
